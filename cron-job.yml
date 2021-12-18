@@ -1,0 +1,19 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: health-check
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: health-check
+            image: sneyd321/health-check-service
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - python app.py --filename=hosts.txt --environment=prod
+          restartPolicy: OnFailure

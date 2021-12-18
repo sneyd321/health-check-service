@@ -1,0 +1,8 @@
+homeowner-service, homeowner-service.default.svc.cluster.local:8081
+house-service, house-service.default.svc.cluster.local:8082
+tenant-service, tenant-service.default.svc.cluster.local:8083
+problem-service, problem-service.default.svc.cluster.local:8085
+image-upload-service, image-upload-service.default.svc.cluster.local:8088
+lease-service, lease-service.default.svc.cluster.local:8090
+document-service, document-service.default.svc.cluster.local:8091
+notification-service, notification-service.default.svc.cluster.local:8093

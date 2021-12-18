@@ -1,0 +1,15 @@
+version: '3.5'
+
+services: 
+    registrar-service:
+        image: sneyd321/health-check-service
+        volumes: 
+            - ./:/usr/src/app
+        restart: on-failure
+        command: bash -c "python app.py --filename=hosts_dev.txt --environment=dev"
+
+  
+        
+
+ 
+    
